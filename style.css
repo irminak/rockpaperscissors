@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Sundries';
+    src: url('fonts/Sundries/Sundries\ DEMO.ttf');
+}
+
+@font-face {
+    font-family: 'Bratsy Script';
+    src: url('fonts/Bratsy Script/BratsyScriptDemoReguler-9YYB0.ttf');
+}
+
+@font-face {
+    font-family: 'Logofontik';
+    src: url('fonts/Logofontik/Logofontik 4F-Regular Italic.ttf');
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap') */
+ /* font-family: 'Press Start 2P', cursive; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: repeating-linear-gradient(45deg, #f89bae 25%, transparent 25%, transparent 75%, #f89bae 75%, #f89bae), repeating-linear-gradient(45deg, #f89bae 25%, #e5e5f7 25%, #e5e5f7 75%, #f89bae 75%, #f89bae);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+}
+.wrap .active{
+    filter: blur(4px);
+}
+header {
+    background-color: #f89bae;
+    height: 210px;
+    text-align: center;
+}
+
+h1 {
+    line-height: 170px;
+    font-family: 'Bratsy Script', sans-serif;
+    font-size: 120px;
+    color: #33a660;
+    animation: header 1.5s ease-out;
+}
+
+h3 {
+    display: inline-block;
+    border: 3px solid black;
+    padding: 5px 100px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    font-family: 'Logofontik', sans-serif;
+    font-size: 20px;
+}
+
+main {
+    text-align: center;
+}
+
+.table {
+    padding: 3% 20%;
+    /* background-color: yellow; */
+
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: royalblue; */
+}
+.half-ellipse { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 170px;
+    height: 230px;
+    border-radius: 50% 50%/ 40% 40% 0 0;
+    background-color: #fbbc56; 
+    border: black 4px solid;
+    justify-content: center;
+    align-items: end;
+    padding-top: 50px;
+    cursor: pointer;
+}
+img{
+    width: 124px;
+    height: 124px;
+}
+.images p{
+    font-family: Logofontik, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+button{
+    width: 30%;
+    position: relative;
+    background: none;
+    border: none;
+    border: 3px solid black;
+    padding: 5px 100px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    font-family: 'Logofontik', sans-serif;
+    font-size: 20px;
+    background-color: #3fd6d1;
+    cursor: pointer; 
+    transition: .3s;
+}
+
+button:hover{
+    background-color: #33a660;
+}
+
+.gameCounter{
+    border: 2px solid black;
+    position: absolute;
+    bottom: 20px;
+    background-color: #9394e7;
+    right: 50%;
+    transform: translateX(50%);
+    width: 640px;
+    font-family: Logofontik, sans-serif;
+    padding: 20px 40px;
+    box-shadow: 10px 10px 0 black;
+    text-align: left;
+
+}
+.gameCounter h2{
+    padding-bottom: 8px;
+}
+.gameCounter p{
+    padding-bottom: 5px ;
+}
+.rec{
+    position: absolute;     
+    top: 5px;
+    bottom: 5px;
+    width: 160px;
+    right: 5px;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  linear-gradient(#9394e7 1px, transparent 1px), linear-gradient(to right, #9394e7 1px, #e5e5f7 1px);
+    background-size: 20px 20px;
+}
+.gameResult{
+    position: absolute;
+    background-color: #222;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    right: 0;
+    text-align: center;
+    padding-top: 10%;
+}
+.gameResult p {
+    font-family:'Press Start 2P', cursive;
+    padding: 30px;
+    color: rgb(109, 255, 47);
+    font-size: 20px;
+}
+.gameResult p span{
+    color: #e86cb0;
+    font-size: 40px;
+}
+.active{
+    animation: score 2.5s;
+}
+
+
+@keyframes header {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes score {
+    0% {
+        top: -100%;
+    }
+
+    30% {
+        top: 0;
+    }
+    70%{
+        top:0;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+

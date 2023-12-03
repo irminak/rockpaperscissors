@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper & Scissors</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Rock, Paper'n Scissors</h1>
+        <h3>Choose an option</h3>
+    </header>
+    <main>
+        <div class="table">
+            <div class="images">
+                <div class="rock half-ellipse" data-option="rock">
+                    <img src="rock.png" alt="">
+                    <p>Rock</p>
+                </div>
+                <div class="paper half-ellipse" data-option="paper">
+                    <img src="paper.png" alt="">
+                    <p>Paper</p>
+                </div>
+                <div class="scissors half-ellipse" data-option="scissors">
+                    <img src="scissors.png" alt="">
+                    <p>Scissors</p>
+                </div>
+            </div>
+        </div>
+            <button>Let's play!</button>
+        <!-- <div class="gameResult">
+            <h2>Score</h2>
+            <p>Your choice: <span data-option="player-choice"></span></p>
+            <p>Computer's choice: <span data-option="ai-choice"></span></p>
+            <p>Winner: <span data-option="who-win"></span></p>
+        </div> -->
+        <div class="gameCounter">
+            <h2>Score</h2>
+            <p>Number of games: <span class="number"></span></p>
+            <p>Wins: <span class="wins"></span></p>
+            <p>Losses: <span class="losses"></span></p>
+            <p>Draws: <span class="draws"></span></p>
+            <div class="rec"></div>
+        </div>
+        <div class="gameResult">
+            <p>Your choice: <span class="player-choice" data-option="player-choice"></span></p>
+            <p>Computer's choice: <span class="ai-choice"  data-option="ai-choice"></span></p>
+            <p>The Winner is: <span class="who-win" data-option="who-win"></span></p>
+        </div>
+    </main>
+    <script src="game.js"></script>
+</body>
+
+</html>
